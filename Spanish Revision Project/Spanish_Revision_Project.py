@@ -131,17 +131,18 @@ def execute():
     guess_one = Entry(window, bd = 5)
     guess_one.place(x=185,y=135)
     guess_one.focus()
-    submit_button = Button(window, text = "           Enter           ", font = "Helvetica 10 bold", bd = 2.5, command = guessing1)
+    submit_button = Button(window, text = "           Enter           ", font = "Helvetica 10 bold", bd = 2.5, command = guessing1(window, guess_one))
     submit_button.place(x=182.8,y=180)
 
     window.geometry("600x600")
     window.mainloop()
-    end()
+    return
         
 btn = Button(root, text = "                    Submit                    ", font = "Helvetica 10 bold", bd = 5, command = execute)
 btn.place(x=143,y=550)
 
-def guessing1():     
+def guessing1(window, guess_one):
+     score = 0
      if choose == guess_one.get():
         score = score+10
         context_other = f'Correct!\nYour score is {score}!'
