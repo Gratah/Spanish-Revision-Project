@@ -1,5 +1,3 @@
-#this is for a test commit
-
 import random
 from tkinter import *
 score = 0
