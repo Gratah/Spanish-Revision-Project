@@ -50,7 +50,7 @@ sl1 = Label(text = "Spanish 1.", font = "Serif 11 bold")
 sl1.place(x=315,y=30)
 se1 = Entry(bd = 5)
 se1.place(x=315,y=50)
-"""
+
 el2 = Label(text = "English 2.", font = "Serif 11 bold")
 el2.place(x=50,y=80)
 ee2 = Entry(bd = 5)
@@ -148,7 +148,7 @@ sl10 = Label(text = "Spanish 10.", font = "Serif 11 bold")
 sl10.place(x=315,y=480)
 se10 = Entry(bd = 5)
 se10.place(x=315,y=500)
-"""
+
 
 btn = Button(root, text = "                    Submit                    ", font = "Helvetica 10 bold", bd = 5, command = execute)
 btn.place(x=143,y=550)
