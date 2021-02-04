@@ -1,8 +1,40 @@
-#this is for a test commit
-
 import random
 from tkinter import *
-score = 0
+
+def execute():
+    window = Tk()
+    window.title("Spanish Revision Resource")
+
+    #entryinputs = [ee1.get(), ee2.get(), ee3.get(), ee4.get(), ee5.get(), ee6.get(), ee7.get(), ee8.get(), ee9.get(), ee10.get()]
+    entryinputs = [ee1.get()]
+    choose = random.choice(entryinputs)
+    context = f'What is "{choose}" in Spanish?'
+    labelquestion = Label(window, text = context, font = "Serif 10 bold")
+    labelquestion.place(x=175,y=100)
+
+    guess_one = Entry(window, bd = 5)
+    guess_one.place(x=185,y=200)
+    guess_one.focus()
+    submit_button = Button(window, text = "           Enter           ", font = "Helvetica 10 bold", bd = 2.5, command = guessing1(window, choose, guess_one))
+    submit_button.place(x=190.8,y=180)
+
+    window.geometry("600x600")
+    window.mainloop()
+    return
+#enddef
+
+def guessing1(window, choose, guess_one):
+    score = 0
+    if choose == guess_one.get():
+        score = score+10
+        context_other = f'Correct!\nYour score is {score}!'
+        correct = Label(window, text = context_other, font = "Helvetica 10 bold", bg = "green")
+        correct.place(x=175,y=500)
+        window.destroy()
+        window2 = Tk()
+    #endif
+#enddef
+
 
 root = Tk()
 root.title("Spanish Revision Resource")
@@ -18,8 +50,7 @@ sl1 = Label(text = "Spanish 1.", font = "Serif 11 bold")
 sl1.place(x=315,y=30)
 se1 = Entry(bd = 5)
 se1.place(x=315,y=50)
-
-
+"""
 el2 = Label(text = "English 2.", font = "Serif 11 bold")
 el2.place(x=50,y=80)
 ee2 = Entry(bd = 5)
@@ -117,39 +148,10 @@ sl10 = Label(text = "Spanish 10.", font = "Serif 11 bold")
 sl10.place(x=315,y=480)
 se10 = Entry(bd = 5)
 se10.place(x=315,y=500)
+"""
 
-def execute():
-    window = Tk()
-    window.title("Spanish Revision Resource")
-    
-    entryinputs = [ee1.get(), ee2.get(), ee3.get(), ee4.get(), ee5.get(), ee6.get(), ee7.get(), ee8.get(), ee9.get(), ee10.get()]
-    choose = random.choice(entryinputs)
-    context = f'What is "{choose}" in Spanish?'
-    labelquestion = Label(window, text = context, font = "Serif 10 bold")
-    labelquestion.place(x=175,y=100)
-    
-    guess_one = Entry(window, bd = 5)
-    guess_one.place(x=185,y=135)
-    guess_one.focus()
-    submit_button = Button(window, text = "           Enter           ", font = "Helvetica 10 bold", bd = 2.5, command = guessing1(window, guess_one))
-    submit_button.place(x=182.8,y=180)
-
-    window.geometry("600x600")
-    window.mainloop()
-    return
-        
 btn = Button(root, text = "                    Submit                    ", font = "Helvetica 10 bold", bd = 5, command = execute)
 btn.place(x=143,y=550)
-
-def guessing1(window, guess_one):
-     score = 0
-     if choose == guess_one.get():
-        score = score+10
-        context_other = f'Correct!\nYour score is {score}!'
-        correct = Label(window, text = context_other, font = "Helvetica 10 bold", bg = "green")
-        correct.place(x=175,y=500)
-        window.destroy()
-        window2 = Tk()
 
 root.geometry("600x600")
 root.mainloop()
