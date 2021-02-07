@@ -5,8 +5,7 @@ def execute():
     window = Tk()
     window.title("Spanish Revision Resource")
 
-    #entryinputs = [ee1.get(), ee2.get(), ee3.get(), ee4.get(), ee5.get(), ee6.get(), ee7.get(), ee8.get(), ee9.get(), ee10.get()]
-    entryinputs = [ee1.get()]
+    entryinputs = [ee1.get(), ee2.get(), ee3.get(), ee4.get(), ee5.get(), ee6.get(), ee7.get(), ee8.get(), ee9.get(), ee10.get()]
     choose = random.choice(entryinputs)
     context = f'What is "{choose}" in Spanish?'
     labelquestion = Label(window, text = context, font = "Serif 10 bold")
@@ -34,7 +33,6 @@ def guessing1(window, choose, guess_one):
         window2 = Tk()
     #endif
 #enddef
-
 
 root = Tk()
 root.title("Spanish Revision Resource")
