@@ -52,6 +52,8 @@ def get_words(wordlist, minimum, count):
                 selection.append(item)
             #endif
         #endif
+        # Note that the above two 'if' statements could be combined using 'and'. In that case both tests would need to be true before continuing
+        # if len(item[1]) >= minimum and item not in selection:
     #endwhile
     # Return the sublist to the caller of the function
     return(selection)
