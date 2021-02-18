@@ -18,7 +18,6 @@ def load_list(filename):
     with open(filename, 'r', newline='') as f:
         # Use the CSV library to load the file
         reader = csv.reader(f)
-        print(type(reader))
         # Return the full list to the caller of the function. The 'list' in this line converts the 'reader' object to a list type
         # using a process called 'casting'. https://www.w3schools.com/python/python_casting.asp
         return(list(reader))
