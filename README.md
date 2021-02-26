@@ -2,4 +2,4 @@
 
 A project to help with Spanish Learning
 The code is inside file-load-quiz
-(COPY THE REPO)
+(Multiple files are needed for the code to work so copy the repo)
