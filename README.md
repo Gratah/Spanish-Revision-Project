@@ -1,3 +1,4 @@
 # Spanish-Revision-Project
 
-A lil' project to help y'all with your Spanish
+A project to help with Spanish Learning
+(The code is inside file-load-quiz)
